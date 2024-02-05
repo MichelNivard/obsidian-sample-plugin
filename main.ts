@@ -3,6 +3,9 @@ var path = require('path');
 // @ts-ignore
 
 import DEFAULT from "./consts"
+// @ts-ignore
+
+import extract from "./extract"
 
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
 
