@@ -4,7 +4,6 @@ r: {
     showModal: true,
     appendOutputContents: true,
     showRunButtonInPreview: true,
-	options: {"shell":"bin/zsh"},
   },
   python: {
     template: 'python3 -c "{{src}}"',
