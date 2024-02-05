@@ -57,9 +57,7 @@ export default class MyPlugin extends Plugin {
             ],
         });
 
-        this.registerInterval(
-            window.setInterval(this.injectButtons.bind(this), 1000)
-        );
+        
     }
 
 	onunload() {
