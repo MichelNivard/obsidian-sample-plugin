@@ -1,4 +1,10 @@
 const DEFAULT_VARIANTS = {
+r: {
+    template: 'Rscript -e "{{src}}"',
+    showModal: true,
+    appendOutputContents: true,
+    showRunButtonInPreview: true,
+  },
   python: {
     template: 'python3 -c "{{src}}"',
     showModal: true,
