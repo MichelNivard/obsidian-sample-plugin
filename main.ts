@@ -14,13 +14,13 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
 }
 
 
-const DEFAULT_VARIANTS = {
-  r: {
-    template: 'Rscript -e "{{src}}"',
-    showModal: true,
-    appendOutputContents: true,
-    showRunButtonInPreview: true,
-  }
+const DEFAULT = {
+ variants:{r: {
+    			template: 'Rscript -e "{{src}}"',
+    			showModal: true,
+    			appendOutputContents: true,
+    			showRunButtonInPreview: true,
+  			}}
 }
 
 class SampleModal extends Modal {
