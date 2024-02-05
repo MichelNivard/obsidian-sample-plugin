@@ -160,18 +160,11 @@ runSnippet() {
         }
     }
 
-apply_template(src: string, template: string, vars: object) {
-    let result = template.replace('{{src}}', src)
-    result = result.replace('{{vault_path}}', vars.vault_path)
-    result = result.replace('{{folder}}', vars.folder)
-    result = result.replace('{{file_name}}', vars.file_name)
-    result = result.replace('{{file_path}}', vars.file_path)
-    return result
+
 }
 
+function writeResult(editor, result: string, outputLine: number) {
 
-writeResult(editor, result: string, outputLine: number) {
- console.log("are we writing?");
     if (typeof result === 'string') {
     let output = `\n\`\`\`output
 ${result ? result.trim() : result}    
@@ -184,6 +177,13 @@ ${result ? result.trim() : result}
 
 }
 
-
-
+function apply_template(src: string, template: string, vars: object) {
+    let result = template.replace('{{src}}', src)
+    result = result.replace('{{vault_path}}', vars.vault_path)
+    result = result.replace('{{folder}}', vars.folder)
+    result = result.replace('{{file_name}}', vars.file_name)
+    result = result.replace('{{file_path}}', vars.file_path)
+    return result
 }
+
+
