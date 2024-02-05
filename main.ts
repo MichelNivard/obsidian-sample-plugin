@@ -41,7 +41,7 @@ export default class MyPlugin extends Plugin {
     async onload() {
 
         console.log("Loading Snippets-plugin");
-        await this.loadSettings();
+        //await this.loadSettings();
 
         //this.addSettingTab(new RunSnippetsSettingsTab(this.app, this));
 
