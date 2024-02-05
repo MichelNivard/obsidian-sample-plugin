@@ -103,7 +103,6 @@ runSnippet() {
 
                 const {exec} = require("child_process");
                 exec(
-				console.log("Executing?");
                   command,
                   variant.options ? variant.options  : {}, 
                   (error, stdout, stderr) => {
@@ -136,6 +135,7 @@ runSnippet() {
                     }
                   }
                 );
+					console.log("Executing?");
 
             }
         }
