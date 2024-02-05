@@ -77,6 +77,7 @@ export default class MyPlugin extends Plugin {
 /// Here is where I began copy pasting things:
 
 runSnippet() {
+	console.log("Running SNippet starts...");
         let vars = this.get_vars();
 
         if (!vars) return;
@@ -102,6 +103,7 @@ runSnippet() {
 
                 const {exec} = require("child_process");
                 exec(
+				console.log("Executing?");
                   command,
                   variant.options ? variant.options  : {}, 
                   (error, stdout, stderr) => {
