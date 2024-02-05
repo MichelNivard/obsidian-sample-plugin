@@ -1,5 +1,7 @@
 var path = require('path');
 
+// @ts-ignore
+import DEFAULT from "./consts"
 
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
 
@@ -13,17 +15,6 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
     variants: DEFAULT.variants
 }
 
-
-const DEFAULT = {
- variants:{
-	 	r: {
-    			template: 'Rscript -e "{{src}}"',
-    			showModal: true,
-    			appendOutputContents: true,
-    			showRunButtonInPreview: true,
-  			}
- }
-}
 
 class SampleModal extends Modal {
 	constructor(app: App) {
