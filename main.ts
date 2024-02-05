@@ -77,7 +77,7 @@ export default class MyPlugin extends Plugin {
 /// Here is where I began copy pasting things:
 
 runSnippet() {
-	console.log("Running SNippet starts...");
+	console.log("Running Snippet starts...");
         let vars = this.get_vars();
 
         if (!vars) return;
@@ -93,7 +93,7 @@ runSnippet() {
             let line = editor.getCursor().line
 
             let match = extract(document, line, variants)
-
+           
             if (match !== null) {
                 let targetLine = match.end + 1
                 let lang = match.lang
@@ -135,7 +135,7 @@ runSnippet() {
                     }
                   }
                 );
-					console.log("Executing?");
+				
 
             }
         }
@@ -162,7 +162,7 @@ runSnippet() {
 	
 
 writeResult(editor, result: string, outputLine: number) {
-
+ console.log("are we writing?");
     if (typeof result === 'string') {
     let output = `\n\`\`\`output
 ${result ? result.trim() : result}    
