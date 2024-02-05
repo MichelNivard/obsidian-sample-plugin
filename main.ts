@@ -10,6 +10,15 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
 	mySetting: 'default'
 }
 
+const DEFAULT_VARIANTS = {
+  r: {
+    template: 'Rscript -e "{{src}}"',
+    showModal: true,
+    appendOutputContents: true,
+    showRunButtonInPreview: true,
+  }
+}
+
 export default class MyPlugin extends Plugin {
 	settings: MyPluginSettings;
 
@@ -40,9 +49,6 @@ export default class MyPlugin extends Plugin {
 	onunload() {
 
 	}
-
-
-
 
 
 
@@ -184,12 +190,5 @@ ${result ? result.trim() : result}
 }
 
 
-const DEFAULT_VARIANTS = {
-  r: {
-    template: 'Rscript -e "{{src}}"',
-    showModal: true,
-    appendOutputContents: true,
-    showRunButtonInPreview: true,
-  }
-}
+
 }
