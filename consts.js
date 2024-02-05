@@ -2,7 +2,7 @@ const DEFAULT_VARIANTS = {
 r: {
     template: '/usr/local/bin/Rscript -e "{{src}}"',
     showModal: true,
-    appendOutputContents: true,
+    appendOutputContents: true, 
     showRunButtonInPreview: true,
   },
   python: {
