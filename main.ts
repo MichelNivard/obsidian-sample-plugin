@@ -93,7 +93,7 @@ runSnippet() {
             let line = editor.getCursor().line
 
             let match = extract(document, line, variants)
-           
+            console.log(match);
             if (match !== null) {
                 let targetLine = match.end + 1
                 let lang = match.lang
