@@ -188,6 +188,25 @@ runSnippet() {
         }
     }
 
+ get_vars() {
+        let active_view = this.app.workspace.getActiveViewOfType(MarkdownView);
+        if (active_view == null) {
+            return null;
+        }
+
+        let vaultPath = this.app.vault.adapter.basePath;
+        let folder = active_view.file.parent.path;
+        let fileName = active_view.file.name
+
+        return {
+            vault_path: vaultPath,
+            folder: folder,
+            file_name: fileName,
+            file_path: path.join(vaultPath, folder, fileName),
+            python: 'python3 -c'
+        }
+    }
+	
 
 writeResult(editor, result: string, outputLine: number) {
 
