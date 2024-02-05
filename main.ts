@@ -42,7 +42,7 @@ export default class MyPlugin extends Plugin {
 	}
 
 
-}
+
 
 
 
@@ -167,7 +167,7 @@ runSnippet() {
             }
         }
     }
-}
+
 
 writeResult(editor, result: string, outputLine: number) {
 
@@ -191,6 +191,5 @@ const DEFAULT_VARIANTS = {
     appendOutputContents: true,
     showRunButtonInPreview: true,
   }
-};
-
-
+}
+}
