@@ -16,7 +16,6 @@ const DEFAULT_SETTINGS: MyPluginSettings = {
     variants: DEFAULT.variants
 }
 
-
 class SampleModal extends Modal {
 	constructor(app: App) {
 		super(app);
@@ -36,11 +35,19 @@ class SampleModal extends Modal {
 export default class MyPlugin extends Plugin {
 	settings: MyPluginSettings;
 
+	 async loadSettings() {
+        this.settings = Object.assign(DEFAULT_SETTINGS, await this.loadData());
+    }
+
+    async saveSettings() {
+        await this.saveData(this.settings);
+    }
+
     async onload() {
 
         console.log("Loading Snippets-plugin");
-        //await this.loadSettings();
-
+        await this.loadSettings();
+		
         //this.addSettingTab(new RunSnippetsSettingsTab(this.app, this));
 
         this.addCommand({
