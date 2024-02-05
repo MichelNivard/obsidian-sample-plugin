@@ -1,6 +1,6 @@
 const DEFAULT_VARIANTS = {
 r: {
-    template: 'Rscript -e "{{src}}"',
+    template: '/usr/local/bin/Rscript -e "{{src}}"',
     showModal: true,
     appendOutputContents: true,
     showRunButtonInPreview: true,
